@@ -1,85 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>foodie Place</title>
-<style>
-    body{
-        background-image: url("image2.jpg");
-        border: 2px solid rosybrown;
-        border-radius: 20px;
-        
+    <style>
+        body {
+            /* background-image: url("image2.jpg"); */
+            /* border: 2px solid rosybrown;
+            border-radius: 20px; */
 
-        
-          }
 
-h1{
 
-text-align: center;
-color:rosybrown;
-padding: 20px;
-font-size: 50px;
+        }
 
-}
-nav{
-    background-color:rosybrown;
-    display: grid;
-    place-items: center;
-    
-}
-nav ul{
-    list-style-type: none;
-}
-nav ul a{
-   display: inline-block;
-   padding: 20px;
-   text-decoration: none;
-   color:black;
-   font-size: 20px;
-   transition: 0.2s ease-in;
-   font-size: 30px;
-   
-}
-nav ul a:hover{
-background-color: rosybrown;
-color: white;
-}
-.items{
-padding: 10px 10px 10px 10px;
+        h1 {
 
-}
-.item{
-padding: 20px 20px 20px 20px ;
-border: 2px solid rosybrown;
-border-radius: 15px;
-}
+            text-align: center;
+            color: rosybrown;
+            padding: 20px;
+            font-size: 50px;
 
-.item:hover{
- transform: scale(1.04);
+        }
 
-}
-.item h2{
+        nav {
+            background-color: rosybrown;
+            max-width: auto;
+            display: grid;
+            place-items: center;
+            margin: 10px;
+            border-radius: 8px;
 
-    text-align: center;
-    color: white;
-}
-.item h4 {
-    padding: 2px ;
-    border: 5px;    
-     background-color: rosybrown;
-     color: white;
-     text-align: center;
-}
+        }
 
-  .item h4 :hover{
-    transform: scale(1.08);
-  }
-  .footer{
-    background-color:rosybrown ;
-  }
+        nav ul {
+            list-style-type: none;
+        }
 
-</style>
+        nav ul a {
+            display: inline-block;
+            padding: 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            transition: 0.2s ease-in;
+            font-size: 30px;
+
+        }
+
+        nav ul a:hover {
+            background-color: rosybrown;
+            color: white;
+        }
+
+        .items {
+            margin: 10px;
+        }
+
+        .item-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+
+        }
+
+        .item {
+            max-width: 400px;
+            border: 2px solid salmon;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .item img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .item-content {
+            padding: 16px;
+
+        }
+
+        .item button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .item button:hover {
+            background-color: #2980b9;
+
+        }
+
+
+        /* Footer section */
+        footer {
+            background-color: #272727;
+            width: 100%;
+            height: 449px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .footer-text {
+            display: flex;
+            width: 625px;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: white;
+
+        }
+
+        .footer-heading {
+            color: white;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 15px;
+            text-align: center;
+
+        }
+
+        .footer-foodie {
+            color: #E55473;
+        }
+
+        .footer-para {
+            margin-bottom: 25px;
+        }
+
+        #copy-right {
+            margin-top: 15px;
+            padding: 10px;
+            color: rgba(255, 255, 255, 0.40);
+            text-align: center;
+            font-family: Lato;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    </style>
 
 
 
@@ -87,99 +163,170 @@ border-radius: 15px;
 
 
 </head>
+
 <body>
+    <header>
+        <h1> Foodie Place</h1>
+        <nav>
+            <ul>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Order</li>
+                </a>
+                <a href="#">
+                    <li>Near</li>
+                </a>
+                <a href="#">
+                    <li>About</li>
+                </a>
 
-    </div>
-    <h1> Foodie Place</h1>
-    <nav>
-<ul>
-    <a href="#"><li>Home</li></a>
-    <a href="#"><li>Order</li></a>
-    <a href="#"><li>Near</li></a>
-    <a href="#"><li>About</li></a>
+            </ul>
+        </nav>
+    </header>
 
-    </ul>
- </nav>
+    <main>
+        <section class="items">
+            <div class="item-container">
+                <div class="item">
+                    <img src="burger.jpg"><br>
+                    <div class="item-content">
+                        <h2>Burger</h2>
+                        <p>Savor the succulent perfection of a mouthwatering burger, where a juicy, perfectly grilled
+                            patty meets a soft, toasted bun, crowned with crisp lettuce, ripe tomatoes, and a symphony
+                            of condiments that create a blissful explosion of flavors.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="burger2.jpg"><br>
+                    <div class=" item-content">
+                        <h2>Burger veg</h2>
+                        <p>Savor the succulent perfection of a mouthwatering burger, where a juicy, perfectly grilled
+                            patty meets a soft, toasted bun, crowned with crisp lettuce, ripe tomatoes, and a symphony
+                            of condiments that create a blissful explosion of flavors.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="pizza.jpg"><br>
+                    <div class=" item-content">
+                        <h2>pizza</h2>
+                        <p>
+                            A delectable fusion of flavors awaits in this pizza, featuring a perfectly crisp crust
+                            adorned with a rich tomato sauce, melted mozzarella, and a medley of savory toppings that
+                            dance on the taste buds with every bite.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="pizza2.jpg"><br>
+                    <div class=" item-content">
+                        <h2>pizza</h2>
+                        <p>
+                            A delectable fusion of flavors awaits in this pizza, featuring a perfectly crisp crust
+                            adorned with a rich tomato sauce, melted mozzarella, and a medley of savory toppings that
+                            dance on the taste buds with every bite</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="pasta..jpg"><br>
+                    <div class=" item-content">
+                        <h2>Pasta</h2>
+                        <p>Indulge in the comforting embrace of al dente pasta, bathed in a luscious blend of aromatic
+                            sauces, where each twirl of the fork captures a symphony of flavors that seamlessly unite to
+                            create a culinary masterpiece.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="pasta2.jpg"><br>
+                    <div class=" item-content">
+                        <h2>Pasta</h2>
+                        <p>Indulge in the comforting embrace of al dente pasta, bathed in a luscious blend of aromatic
+                            sauces, where each twirl of the fork captures a symphony of flavors that seamlessly unite to
+                            create a culinary masterpiece.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="chicken.jpg"><br>
+                    <div class=" item-content">
+                        <h2>Chicken</h2>
+                        <p>Experience the culinary magic of tender, succulent chicken, expertly seasoned and perfectly
+                            cooked to golden perfection, delivering a symphony of savory notes that dance on the palate
+                            with every delightful bite.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="chicken2.jpg"><br>
+                    <div class=" item-content">
+                        <h2>Chicken</h2>
+                        <p>Experience the culinary magic of tender, succulent chicken, expertly seasoned and perfectly
+                            cooked to golden perfection, delivering a symphony of savory notes that dance on the palate
+                            with every delightful bite.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="chicken3.jpg"><br>
+                    <div class=" item-content">
+                        <h2>Chicken</h2>
+                        <p>Experience the culinary magic of tender, succulent chicken, expertly seasoned and perfectly
+                            cooked to golden perfection, delivering a symphony of savory notes that dance on the palate
+                            with every delightful bite.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="ice cream.jpg"><br>
+                    <div class=" item-content">
+                        <h2>Ice cream</h2>
+                        <p>Delight in the velvety decadence of ice cream, a chilly masterpiece with creamy, luscious
+                            textures and an array of dreamy flavors that transport your taste buds to a sweet oasis of
+                            pure indulgence. </p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="ice cream2.jpg"><br>
+                    <div class=" item-content">
+                        <h2>Ice cream</h2>
+                        <p>Delight in the velvety decadence of ice cream, a chilly masterpiece with creamy, luscious
+                            textures and an array of dreamy flavors that transport your taste buds to a sweet oasis of
+                            pure indulgence.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="ice cream3.jpg"><br>
+                    <div class=" item-content">
+                        <h2>Ice cream</h2>
+                        <p>Delight in the velvety decadence of ice cream, a chilly masterpiece with creamy, luscious
+                            textures and an array of dreamy flavors that transport your taste buds to a sweet oasis of
+                            pure indulgence.</p>
+                        <button>Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-text">
+            <h1 class="footer-heading"><span class="footer-foodie">Foodie</span> place</h1>
+            <p class="footer-para">It is a long established fact that a reader will be distracted by the
+                readable<br>content of a page when looking at its layout.</p>
+            <p id="copy-right">@2020-2023, Foodieplace.com. All rights reserved.</p>
+            <br>
+            <br>
+            <hr width="100%">
+        </div>
+    </footer>
 
- <section class="items">
-    <div style="display:flex">
-    <div class="item">
-        <img src="burger.jpg" height="300px" width="450px"><br>
-        <h2>Burger</h2>
-        <h4>Order</h4>
-    </div>
-    <div class="item">
-        <img src="burger2.jpg" height="300px" width="450px"><br>
-        <h2>Burger veg</h2>
-        <h4>Order</h4>
-    </div>
-    <div class="item">
-        <img src="pizza.jpg" height="300px" width="450px"><br>
-         <h2>pizza</h2>
-        <h4>Order</h4>
-    </div>
-    </div>
-    
-    <div style="display: flex;">
-    <div class="item">
-        <img src="pizza2.jpg" height="300px" width="450px"><br>
-        <h2>Pizza veg</h2>
-        <h4>Order</h4>
-    </div>
-    <div class="item">
-        <img src="pasta..jpg" height="300px" width="450px"><br>
-        <h2>Pasta</h2>
-        <h4>Order</h4>
-    </div>
 
-    <div class="item">
-        <img src="pasta2.jpg" height="300px" width="450px"><br>
-        <h2>pasta veg</h2>
-        <h4>Order</h4>
-    </div>
-    </div>
-    
-   <div style="display: flex;">  
-    <div class="item">
-        <img src="chicken.jpg"height="300px" width="450px"><br>
-        <h2>Chicken</h2>
-        <h4>Order</h4>
-    </div>
-    <div class="item">
-        <img src="chicken2.jpg" height="300px" width="450px"><br>
-        <h2>Chicken veg</h2>
-        <h4>Order</h4>
-    </div>
-    <div class="item">
-        <img src="Biryani.jpg" height="300px" width="450px"><br>
-        <h2>Biryani</h2>
-        <h4>Order</h4>
-    </div>
-    </div>
-    <div style="display: flex;">
-    <div class="item">
-        <img src="ice cream2.jpg" height="300px" width="450px"><br>
-        <h2>Ice cream</h2>
-        <h4>Order</h4>
-    </div>
-    <div class="item">
-        <img src="coffee.jpg" height="300px" width="450px"><br>
-        <h2>Coffee</h2>
-        <h4>Order</h4>
-    </div>
-    <div class="item">
-        <img src="Fruit.pg.jpg" height="300px" width="450px"><br>
-        <h2>Fruit juice</h2>
-        <h4>Order</h4>
-    </div>
-    </div>
-    <footer class="footer" style="text-align: center; height: 100px; width: 1483px; font-size: 40px
-    ; margin: auto; padding: auto;"><b><i>Developed by <br>zannnatul Mawa Hira</i> </b></footer>
-
-
-
-</section>
-
-    
 </body>
+
 </html>
